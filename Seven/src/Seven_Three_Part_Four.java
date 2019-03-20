@@ -7,7 +7,7 @@ public class Seven_Three_Part_Four {
     //Lab 7.3 Part 4
     //
     public static void main(String[] args) {
-        File dog = new File("src/Dog.txt");
+        File dog = new File("Seven/src/Dog.txt");
         try
         {
             Scanner theScanner = new Scanner(dog);
