@@ -12,6 +12,8 @@ public class Seven_Three_Part_Two {
         try
         {
             Scanner theScanner = new Scanner(dog);
+            //making the scanner
+            //looping to print names and check age
             while(1<2){
                 System.out.println(theScanner.next());
                 if(theScanner.nextInt() < 7) {
