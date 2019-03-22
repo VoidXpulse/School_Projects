@@ -28,7 +28,7 @@ public class Seven_Four_Part_One {
             System.out.println("What does Clint Eastwood anagram to?");
             System.out.println("1. Ace Wins Lotto");
             System.out.println("2. Nothing, this is a trick");
-            System.out.println("3. Lint Ceast Wood");
+            System.out.println("3. Lint Cease Twood");
             System.out.println("4. Old West Action");
             answers += answer() + " ";
             System.out.println("3rd Question:");
@@ -47,10 +47,10 @@ public class Seven_Four_Part_One {
             answers += answer() + " ";
             System.out.println("5th Question:");
             System.out.println("What is the answer to this question?");
-            System.out.println("1. Yes");
+            System.out.println("1. The answer to this question.");
             System.out.println("2. No");
             System.out.println("3. Perhaps");
-            System.out.println("4. The answer to this question.");
+            System.out.println("4. Yes");
             answers += answer() + " ";
             System.out.println("Are you the last person?");
             System.out.println("1. Yes");
@@ -59,7 +59,7 @@ public class Seven_Four_Part_One {
         }
         while(nextplayer != 1);
 
-        File quiz = new File("src/quiz.txt");
+        File quiz = new File("Seven/src/quiz.txt");
         PrintWriter pw;
         //making the file
         //error trapping
