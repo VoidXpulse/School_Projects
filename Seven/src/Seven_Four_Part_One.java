@@ -8,8 +8,13 @@ public class Seven_Four_Part_One {
     //
     public static void main(String[] args) {
         String answers = "", name = "";
-        int nextplayer = 0;
+        int nextplayer = 0, filechange;
         Scanner theScanner = new Scanner(System.in);
+        System.out.println("Are you appending to or making a new quiz?");
+        System.out.println("1. Append");
+        System.out.println("2. New");
+        System.out.println("Note: The default is to make a new file.");
+        filechange = theScanner.nextInt();
         do
         {
             System.out.println("Enter your first name");
@@ -58,22 +63,36 @@ public class Seven_Four_Part_One {
             nextplayer = theScanner.nextInt();
         }
         while(nextplayer != 1);
+        if(filechange == 1) {
+            try{
+                //making file connections
+                FileWriter fw = new FileWriter("Seven/src/quiz.txt", true);
+                PrintWriter pw = new PrintWriter(fw);
+                //appends the files
+                pw.print(answers);
+                //closes the file
+                pw.close();
+            }
+            catch(IOException e) {
+                //error message
+                System.out.println(e.getMessage());
+            }
 
-        File quiz = new File("Seven/src/quiz.txt");
-        PrintWriter pw;
-        //making the file
-        //error trapping
-        try
-        {
-            pw = new PrintWriter(quiz);
-            pw.println(answers);
-            pw.close();
-            //printing to the thing and closing it
         }
-        catch(FileNotFoundException e)
-        {
-            System.out.println(e.getMessage());
-            //error result
+        else {
+            File quiz = new File("Seven/src/quiz.txt");
+            PrintWriter pw;
+            //making the file
+            //error trapping
+            try {
+                pw = new PrintWriter(quiz);
+                pw.println(answers);
+                pw.close();
+                //printing to the thing and closing it
+            } catch (FileNotFoundException e) {
+                System.out.println(e.getMessage());
+                //error result
+            }
         }
     }
     public static int answer() {
