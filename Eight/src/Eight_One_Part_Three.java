@@ -5,7 +5,7 @@ public class Eight_One_Part_Three {
    Justin Ecarma
    4/1/2019
    Lab 8.1 Part 2
-
+    Extra: User can enter the number of ages they want to enter
    */
     public static void main(String[] args) {
         Scanner theScanner = new Scanner(System.in);
