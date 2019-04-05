@@ -2,6 +2,10 @@ import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Eight_Two_Part_One {
+    //Justin Ecarma
+    //4/4/2019
+    //Lab 8.2
+    //Extra:
     public static void main(String[] args) {
         Scanner theScanner = new Scanner(System.in);
         int numbers;
@@ -21,7 +25,13 @@ public class Eight_Two_Part_One {
         System.out.println("Statistics");
         for(double y:usernums) {
             perkent = (y / sum) * 100;
-            System.out.println(decaFor2.format(y) + " is " + decaFor.format(perkent) + "% of the sum");
+            System.out.print(decaFor2.format(y) + " is " + decaFor.format(perkent) + "% of the sum");
+            if(y % 2 == 0) {
+                System.out.println(" and is also even.");
+            }
+            else {
+                System.out.println(" and is also odd.");
+            }
         }
 
     }
