@@ -5,7 +5,7 @@ public class Eight_Two_Part_One {
     //Justin Ecarma
     //4/4/2019
     //Lab 8.2
-    //Extra:
+    //Extra: The user will be told if the number is even or odd. 
     public static void main(String[] args) {
         Scanner theScanner = new Scanner(System.in);
         int numbers;
