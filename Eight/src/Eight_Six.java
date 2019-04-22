@@ -1,65 +1,42 @@
 import java.util.Scanner;
 
 public class Eight_Six {
+    //Justin Ecarma
+    //4/22/2019
+    //Lab 8.6
+    //Extra: The user can choose the number to search for.
     public static void main(String[] args) {
         boolean success;
-        int count = 2, word = 0, place;
+        int numbers[] = {11, 16, 22, 23, 34, 46, 48, 50, 75, 78};
         int key = 22;
+        int top = numbers.length - 1, bottom = 0;
         Scanner theScanner = new Scanner(System.in);
-       int numbers[] = {11, 16, 21, 23, 34, 46, 48, 50, 75, 78};
-       place = numbers.length/2;
-        while(1<2) {
-            if(numbers[0] == key) {
-                success = true;
-                break;
-            }
-            else if(numbers[0] > key) {
-                success = false;
-                break;
-            }
-            else {
-
-            }
-            System.out.println("1");
-            if(numbers[numbers.length - 1] == key) {
-                success = true;
-                break;
-            }
-            else if(numbers[numbers.length - 1] < key) {
-                success = false;
-                break;
-            }
-            else {
-
-            }
-            System.out.println("2");
-            if(numbers[place] == key){
-                success = true;
-                break;
-            }
-            else if(numbers[place] > key) {
-                place /= 2;
-            }
-            else if(place == numbers.length) {
-                success = false;
-                break;
-            }
-            else if{
-
-            }
-            else{
-                place += numbers.length/(2^count);
-            }
-            count++;
-            System.out.println("3");
-        }
-        if(success = true) {
-            System.out.println("FIN");
-            System.out.println(count);
+        System.out.println("Choose a number to search the array for.");
+        key = theScanner.nextInt();
+        if(binarySearch(numbers, key, top, bottom)) {
+            System.out.println("The key was found.");
         }
         else {
-            System.out.println("Lol u succ");
-            System.out.println(count);
+            System.out.println("The key was not found.");
+        }
+    }
+    public static boolean binarySearch(int numbers[], int key, int top, int bottom) {
+        return binarySearchOne(numbers, key, top, bottom);
+    }
+    public static boolean binarySearchOne(int numbers[], int key, int top, int bottom) {
+        if(bottom > top) {
+            return false;
+        }
+        int mid = (bottom + top) / 2;
+
+        if(numbers[mid] == key) {
+            return true;
+        }
+        else if(key < numbers[mid]){
+            return binarySearchOne(numbers, key, mid - 1, bottom);
+        }
+        else {
+            return binarySearchOne(numbers, key, top, mid +1);
         }
     }
 }
