@@ -1,8 +1,13 @@
 public class Eight_Seven {
     public static void main(String[] args) {
-        int[] numbers = {2,3,3454,43,32,4,45,56,24353,4353453,4,53,5,43,543,5,34,564876,768763,64,6867,2375765,34377696,890786,4,673,652521165,645765,756753637,868645464};
+        int[] numbers = {65, 45, 34, 12, 99, 54, 39, 2, 88, 18};
+        double[] numbers2 = {43.2, 13.6, 91.4, 23.6, 72.1};
         bubble(numbers);
         for(int y:numbers) {
+            System.out.println(y);
+        }
+        exchange(numbers2);
+        for(double y:numbers2) {
             System.out.println(y);
         }
     }
@@ -22,13 +27,16 @@ public class Eight_Seven {
             }
         }
     }
-    public static void exchange(int[] numbers) {
-        int temp;
+    public static void exchange(double[] numbers) {
+        double temp;
+
         for(int i = 0; i < numbers.length - 1; i++) {
-            if(numbers[i] < numbers[i+1]) {
-                temp = numbers[i];
-                numbers[i] = numbers[i + 1];
-                numbers[i + 1] = temp;
+            for(int j = i + 1; j < numbers.length; j++) {
+                if(numbers[i] > numbers[j]) {
+                    temp = numbers[i];
+                    numbers[i] = numbers[j];
+                    numbers[j] = temp;
+                }
             }
         }
     }
