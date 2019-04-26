@@ -1,15 +1,19 @@
 import java.util.Scanner;
 
 public class Eight_Eight {
+    //Justin Ecarma
+    //4/26/2019
+    //Lab 8.8
+    //Extra: You can sort by street name
     public static void main(String[] args) {
         int sorter;
         Scanner theScanner = new Scanner(System.in);
         String[] name = {"Barney Fife", "Luke Skywalker", "Cruella Deville", "Sally Smith", "Marsha Brady", "Gomez Addams", "John Adams", "Marie Antoinette", "Albert Einstein","Mick Jagger", "Mickey Mouse"};
-        String[] address = {"10 Warbler Rd.", "R2 Death Star Ave.", "123 Witchey Way", "3862 Street Blvd.", "1970 Groovy Street", "1 Spooky Circle", " 3445 Presidential Plaza", "2 Rue Morgue", "7 Relativity Rd.", "100 Rolling Stone Path", "2 Disney Lane"};
+        String[] address = {"10 Warbler Rd.", "R2 Death Star Ave.", "123 Witchey Way", "3862 Street Blvd.", "1970 Groovy Street", "1 Spooky Circle", "3445 Presidential Plaza", "2 Rue Morgue", "7 Relativity Rd.", "100 Rolling Stone Path", "2 Disney Lane"};
         String[] city = {"Mountainville, SC 34765", "Jupiter, MD 44623", "Hollywood, CA 12345", "Springfield, IL 31733", "Arlington, VA 51266", "Tombstone, AZ 63341", "New York, NY 11220", "New Orleans, LA 25993", "Topeka, KS 63121", "Seattle, WA 23733", "Orlando, FL 72272"};
 
         System.out.println("Chose what order you would like to view in.");
-        System.out.println("1. Last Name \n2. Name of City \n3. Number of Zipcode");
+        System.out.println("1. Last Name \n2. Name of City \n3. Number of Zipcode \n4. Street Name");
         sorter = theScanner.nextInt();
 
         if(sorter == 1) {
@@ -18,9 +22,11 @@ public class Eight_Eight {
         else if (sorter == 2) {
             namecity(name, address, city);
         }
-        else {
-
+        else if (sorter == 3) {
             zip(city, address, name);
+        }
+        else {
+            streetname(address, city, name);
         }
         for(int i = 0; i < name.length; i++) {
             System.out.print(name[i]);
@@ -96,6 +102,30 @@ public class Eight_Eight {
                         temp = address[i];
                         address[i] = address[j];
                         address[j] = temp;
+                }
+            }
+        }
+    }
+    public static void streetname(String[] name, String[] address, String[] city) {
+        String temp;
+        boolean flag = true;
+        while(flag){
+            flag = false;
+
+            for(int i = 0; i < name.length - 1; i++) {
+                if((name[i].substring(name[i].indexOf(" "), (name[i].indexOf(" ") + 2)).compareToIgnoreCase(name[i + 1].substring(name[i + 1].indexOf(" "), (name[i + 1].indexOf(" ") + 2)))) > 0) {
+                    temp = name[i];
+                    name[i] = name[i + 1];
+                    name[i + 1] = temp;
+
+                    temp = address[i];
+                    address[i] = address[i + 1];
+                    address[i + 1] = temp;
+
+                    temp = city[i];
+                    city[i] = city[i + 1];
+                    city[i + 1] = temp;
+                    flag = true;
                 }
             }
         }
