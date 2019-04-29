@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+import java.util.Arrays;
 public class Eight_Nine_Part_One {
     //Justin Ecarma
     //4/26/2019
@@ -35,7 +35,7 @@ public class Eight_Nine_Part_One {
         printArray(terms);
         alphabetic(terms);
         printArray(terms);
-        if (binarySearch(terms, "mouse", terms.length - 1, 0)) {
+        if ((Arrays.binarySearch(terms, "mouse") > -1) || (Arrays.binarySearch(terms, "Mouse") > -1)) {
             System.out.println("Mouse is in the array.");
         }
         else {
@@ -72,24 +72,5 @@ public class Eight_Nine_Part_One {
         }
         return oscar;
     }
-    public static boolean binarySearch(String numbers[], String key, int top, int bottom) {
-        return binarySearchOne(numbers, key, top, bottom);
-    }
-    public static boolean binarySearchOne(String numbers[], String key, int top, int bottom) {
-        if(bottom > top) {
-            return false;
-        }
-        int mid = (bottom + top) / 2;
+}
 
-        if(numbers[mid].equalsIgnoreCase(key)) {
-            return true;
-        }
-        else if(key.equalsIgnoreCase(numbers[mid])){
-            return binarySearchOne(numbers, key, mid - 1, bottom);
-        }
-        else {
-            return binarySearchOne(numbers, key, top, mid +1);
-        }
-    }
-}
-}
