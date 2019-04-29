@@ -4,7 +4,7 @@ public class Eight_Nine_Part_One {
     //Justin Ecarma
     //4/26/2019
     //Lab 8.9
-    //
+    //Extra: Method that prints the array given as argument.
     public static void main(String[] args) {
         int oscar = -1;
         Scanner theScanner = new Scanner(System.in);
