@@ -1,12 +1,19 @@
-public class Eight_Eleven   {
+import java.util.Scanner;
+
+public class Eight_Eleven {
+    //Justin Ecarma
+    //4/29/2019
+    //Lab 8.11
+    //User can choose to sort by ID or movie
     public static void main(String[] args) {
+        Scanner theScanner = new Scanner(System.in);
         String[] name = {"Jerry", "Luigi", "Bob", "Joe", "Tom", "Ace", "Zac", "Pal", "Jan", "Vito"};
         int[] customer = {10223, 32443, 34598, 45920, 46840, 93462, 39583, 79367, 34850, 38450, };
         int[] movie = {123, 345, 254, 435, 664, 758, 754, 879, 234, 156};
         int[] rental = {1, 1, 1, 5, 1, 5, 5, 5, 1, 5};
         int[] days = {5, 46, 24, 3, 1, 5, 23, 1, 1, 4};
         boolean[] late = new boolean[10];
-
+        int order = 0;
         for(int i = 0; i < late.length; i++) {
             if(days[i] > rental[i]) {
                 late[i] = true;
@@ -15,16 +22,26 @@ public class Eight_Eleven   {
                 late[i] = false;
             }
         }
+        System.out.println("Would you like customers printed out by id or movie?");
+        System.out.println("1. ID");
+        System.out.println("2. Movie");
+        order = theScanner.nextInt();
 
-        arraySort(name, customer, movie, rental, days, late);
+        if(order == 1) {
+            arraySort(name, customer, movie, rental, days, late);
+        }
+        else {
+            arraySort(name, movie, customer, rental, days, late);
+        }
 
-        for(int i = 0; i < late.length; ) {
+        System.out.println("Late");
+        for(int i = 0; i < late.length; i++) {
             if(late[i]) {
                 System.out.println(name[i]);
             }
         }
-
-        for(int i = 0; i < late.length; ) {
+        System.out.println("Not late");
+        for(int i = 0; i < late.length; i++) {
             if(!(late[i])) {
                 System.out.println(name[i]);
             }
