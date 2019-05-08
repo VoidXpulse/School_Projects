@@ -1,25 +1,58 @@
+import java.util.Scanner;
+
 public class Eight_Fourteen {
     //Justin Ecarma
     //5/6/2019
     //Lab 8.14
     //
     public static void main(String[] args) {
-        int [] value = {1, 325, 34,5,4,3,34,63,63,6,3,6,3,63,6,3,6,47,575,6,36,2,87,68,6585,34,6,};
-        int i, temp, j;
-        for (i =0; i< value.length -1 ; i++)
-        {
-            for (j = i+1; i < value.length - 1; j++)
-            {
-                if (value[i] > value[j] )
-                {
-                    temp = value[i];
-                    value[i] = value[j];
-                    value[j] = temp;
+        double[] yeet = {15.5, 24.6, 32.7, 14.3, 15.8};
+
+        exchange(yeet);
+
+        boolean success;
+        double key = 22;
+        int top = yeet.length - 1, bottom = 0;
+        Scanner theScanner = new Scanner(System.in);
+        System.out.println("Choose a number to search the array for.");
+        key = theScanner.nextDouble();
+        if(binarySearch(yeet, key, top, bottom)) {
+            System.out.println("The key was found.");
+        }
+        else {
+            System.out.println("The key was not found.");
+        }
+    }
+    public static void exchange(double[] numbers) {
+        double temp;
+
+        for(int i = 0; i < numbers.length - 1; i++) {
+            for(int j = i + 1; j < numbers.length; j++) {
+                if(numbers[i] > numbers[j]) {
+                    temp = numbers[i];
+                    numbers[i] = numbers[j];
+                    numbers[j] = temp;
                 }
             }
         }
-        for(int y:value) {
-            System.out.println(y);
+    }
+    public static boolean binarySearch(double numbers[], double key, int top, int bottom) {
+        return binarySearchOne(numbers, key, top, bottom);
+    }
+    public static boolean binarySearchOne(double numbers[], double key, int top, int bottom) {
+        if(bottom > top) {
+            return false;
+        }
+        int mid = (bottom + top) / 2;
+
+        if(numbers[mid] == key) {
+            return true;
+        }
+        else if(key < numbers[mid]){
+            return binarySearchOne(numbers, key, mid - 1, bottom);
+        }
+        else {
+            return binarySearchOne(numbers, key, top, mid +1);
         }
     }
 }
