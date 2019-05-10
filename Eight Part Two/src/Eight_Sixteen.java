@@ -4,7 +4,7 @@ public class Eight_Sixteen {
     //Justin Ecarma
     //5/8/2019
     //Lab 8.16
-    //
+    //Extra: Menu for the options
     public static void main(String[] args) {
         int casenum;
         Scanner theScanner = new Scanner(System.in);
