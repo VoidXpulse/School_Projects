@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Eight Part One/Eight Part One.iml" filepath="$PROJECT_DIR$/Eight Part One/Eight Part One.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Eight Part Three/Eight Part Three.iml" filepath="$PROJECT_DIR$/Eight Part Three/Eight Part Three.iml" />
       <module fileurl="file://$PROJECT_DIR$/Eight Part Two/Eight Part Two.iml" filepath="$PROJECT_DIR$/Eight Part Two/Eight Part Two.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EightPartThree/EightPartThree.iml" filepath="$PROJECT_DIR$/EightPartThree/EightPartThree.iml" />
       <module fileurl="file://$PROJECT_DIR$/School Projects.iml" filepath="$PROJECT_DIR$/School Projects.iml" />
       <module fileurl="file://$PROJECT_DIR$/School_Projects.iml" filepath="$PROJECT_DIR$/School_Projects.iml" />
       <module fileurl="file://$PROJECT_DIR$/Seven/Seven.iml" filepath="$PROJECT_DIR$/Seven/Seven.iml" />
