@@ -1,5 +1,3 @@
-import com.sun.xml.internal.stream.Entity;
-
 import java.util.Scanner;
 
 public class Eight_Seventeen {
