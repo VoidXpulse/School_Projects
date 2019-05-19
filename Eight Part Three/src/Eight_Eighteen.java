@@ -4,7 +4,7 @@ public class Eight_Eighteen {
     //Justin Ecarma
     //5/14/2019
     //Lab 8.18
-    //Extra: Students have a 1/2 chance to follow conduct during the ceremony
+    //Extra: Students have a 1/2 chance to not follow conduct during the ceremony and therefore not graduate
     public static void main(String[] args) {
         Random rando = new Random();
         int[] id = {123456, 124563, 134522, 143266, 145667, 187622, 164522};
@@ -14,10 +14,13 @@ public class Eight_Eighteen {
         boolean[] hoursbool = new boolean[hours.length];
         boolean[] gpabool = new boolean[gpa.length];
         boolean[] conduct = new boolean[names.length];
+        //declaring and initializing variables and arrays
+        //alphabetical sort
         alphabetic(names, id, hours, gpa);
         for(int i = 0; i < hours.length - 1; i++) {
             conduct[i] = rando.nextBoolean();
         }
+        //getting the random chance of failure
         for(int i = 0; i < hours.length - 1; i++) {
             if(hours[i] >= 132) {
                 hoursbool[i] = true;
@@ -34,6 +37,8 @@ public class Eight_Eighteen {
                 gpabool[i] = false;
             }
         }
+        //checking gpa and hours
+        //printing the result
         for(int i = 0; i < hours.length - 1; i++) {
             System.out.print("ID: " + id[i]);
             System.out.print(" Name: " + names[i]);
@@ -56,6 +61,7 @@ public class Eight_Eighteen {
             }
         }
     }
+    //alphabetical sort
     public static void alphabetic(String[] words, int[] id, int[] hours, double[] gpa) {
         String temp;
         int temp1;

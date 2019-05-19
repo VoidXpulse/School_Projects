@@ -10,9 +10,13 @@ public class Eight_Thirteen {
         int x = 0;
         int magic[][] = {{16, 3, 2, 13}, {5, 10, 11, 8}, {9, 6, 7, 12}, {4, 15, 14, 1}};
         int model = 0;
+        //declaring and initializing variables
+
         System.out.println("Would you like to do a premade array or make one yourself?");
         System.out.println("1. Premade");
         System.out.println("2. Original");
+        //deciding whether premade or new magic square should be used
+
         model = theScanner.nextInt();
         if(model <= 1) {
             if(check(magic)) {
@@ -23,9 +27,12 @@ public class Eight_Thirteen {
             }
         }
         else {
+            //making a new array
             System.out.println("What side length would you like?");
             x = theScanner.nextInt();
             int test[][] = new int[x][x];
+
+            System.out.println("Enter your numbers");
 
             for (int i = 0; i < test.length; i++) {
                 for (int j = 0; j < test.length; j++) {
@@ -39,12 +46,15 @@ public class Eight_Thirteen {
             else {
                 System.out.println("This magic square is fake.");
             }
+            //saying whether the square is magic or not
         }
     }
     public static boolean check(int[][] magic) {
         int yeet = 0;
         int tempsum = 0;
         boolean fail = true;
+        //getting the variables
+
         for(int i = 0; i < magic.length; i++) {
             yeet += magic[magic.length - i - 1][i];
         }
@@ -81,5 +91,6 @@ public class Eight_Thirteen {
             fail = false;
         }
         return fail;
+        //if return is set to false, the square has failed 1 or more of the tests
     }
 }

@@ -4,26 +4,33 @@ public class Eight_Seventeen {
     //Justin Ecarma
     //5/13/2019
     //Lab 8.17
-    //
+    //Extra: User can make their own array
     public static void main(String[] args) {
         Scanner theScanner = new Scanner(System.in);
         int woot = 0;
         int howmany = 0;
         int[] numbers = {26, 19, 45, 22, 79, 35, 21, 4, 76, 45, 56, 90, 88, 32, 45, 3, 66, 74, 77, 35, 24, 33, 42, 55, 76, 74, 88, 90};
+
+        //declaring and intializing variables
+
         System.out.println("Would you like to make your own array?");
         System.out.println("1. Yes");
         System.out.println("2. No");
         woot = theScanner.nextInt();
+        //asking whether array should be made or not
         if(woot == 1) {
-            System.out.println("Enter your numbers.");
+            System.out.println("Enter your numbers. Between 0 and 100");
             for(int i = 0; i < numbers.length; i++) {
                 theScanner.nextInt();
             }
+            //looping in order to get input for array
         }
         int[] asterisk = new int[10];
         for(int i = 0; i < asterisk.length; i++){
             asterisk[i] = 0;
         }
+        //making new array for asterisk count
+        //getting number of asterisks for each column
         for (int y:numbers) {
             if ((y >= 0) && (y <= 9)) {
                 asterisk[0]++;
@@ -49,6 +56,7 @@ public class Eight_Seventeen {
                 continue;
             }
         }
+        //printing asterisk[]
         for(int i = 0; i < asterisk.length; i++){
             if(asterisk[i] > 0){
                 for(int g = 0; g < asterisk[i]; g++){

@@ -9,7 +9,7 @@ public class Eight_Sixteen {
         int casenum;
         Scanner theScanner = new Scanner(System.in);
 
-        String[] name = {"Bowman", "Walker", "Christian", "Edwards", "Cummings", "Halpern", "Scott", "Rhineheart", "Haley", "Brooks" };
+        String[] name = {"Bowman", "Walker", "Christian", "Edwards", "Cummings", "Halpern", "Scott", "Rhineheart", "Haley", "Brooks"};
         String[] address = {"Canaan", "Newark", "Hardwick", "Montgomery", "Trenton", "Liverpool", "Sheridan", "Houston", "Westfield", "Syosset"};
         String[] state = {"CT", "NJ", "VT", "AL", "NJ", "NY", "WY", "TX", "NJ", "NY"};
 
@@ -22,60 +22,69 @@ public class Eight_Sixteen {
         String[] car = {"Saturn", "Olds", "Chev", "Chev", "Ford", "Chev", "Ford", "Cad", "Honda", "Ford"};
         int[] year = {2009, 2006, 2010, 2013, 2009, 2012, 2008, 2017, 2004, 2011};
 
+        //declaring and intializing the arrays and variables
+
         alphabetic(name, address, state, age, gender, salary, savings, car, year);
+        //alphabetically sorting all the arrays
 
-        System.out.println("What case would you like to view?");
-        System.out.println("1. Case 1");
-        System.out.println("2. Case 2");
-        System.out.println("3. Case 3");
-        System.out.println("4. Case 4");
-        casenum = theScanner.nextInt();
+        do {
+            System.out.println("What case would you like to view?");
+            System.out.println("1. Case 1");
+            System.out.println("2. Case 2");
+            System.out.println("3. Case 3");
+            System.out.println("4. Case 4");
+            System.out.println("5. Exit");
+            casenum = theScanner.nextInt();
+            //having all the cases in one program as opposed to split into 4 or all in a row
+            //printing the choice
+            switch (casenum) {
+                case (1): {
+                    for (int i = 0; i < name.length - 1; i++) {
+                        if ((gender[i] == 'M') && (age[i] > 30) && (car[i].equalsIgnoreCase("Ford")) && (salary[i] > 20000)) {
+                            System.out.println("Name:" + name[i]);
+                            System.out.println("Address:" + address[i]);
+                            System.out.println("");
+                        }
+                    }
+                    break;
+                }
+                case (2): {
+                    for (int i = 0; i < name.length - 1; i++) {
+                        if (((car[i].equalsIgnoreCase("Chev")) || (car[i].equalsIgnoreCase("Honda")) || (car[i].equalsIgnoreCase("Ford"))) && (salary[i] > 15000) && (savings[i]) < 2000) {
+                            System.out.println("Name:" + name[i]);
+                            System.out.println("");
+                        }
+                    }
+                    break;
+                }
+                case (3): {
+                    for (int i = 0; i < name.length - 1; i++) {
+                        if (gender[i] == 'F') {
+                            System.out.println("Name:" + name[i]);
+                            System.out.println("Make:" + car[i]);
+                            System.out.println("Year:" + year[i]);
+                            System.out.println("");
+                        }
+                    }
+                    break;
+                }
+                case (4): {
+                    for (int i = 0; i < name.length - 1; i++) {
+                        if ((gender[i] == 'M') && (age[i] < 35) && (car[i].equalsIgnoreCase("Ford")) && (state[i].equalsIgnoreCase("NJ"))) {
+                            System.out.println("Name:" + name[i]);
+                            System.out.println("");
+                        }
+                    }
+                    break;
+                }
+                default: {
 
-        switch (casenum) {
-            case(1): {
-                for(int i = 0; i < name.length - 1; i++) {
-                    if((gender[i] == 'M') && (age[i] > 30) && (car[i].equalsIgnoreCase("Ford")) && (salary[i] > 20000)) {
-                        System.out.println("Name:" + name[i]);
-                        System.out.println("Address:" + address[i]);
-                        System.out.println("");
-                    }
                 }
-                break;
-            }
-            case(2): {
-                for(int i = 0; i < name.length - 1; i++) {
-                    if(((car[i].equalsIgnoreCase("Chev")) || (car[i].equalsIgnoreCase("Honda")) || (car[i].equalsIgnoreCase("Ford"))) && (salary[i] > 15000) && (savings[i]) < 2000) {
-                        System.out.println("Name:" + name[i]);
-                        System.out.println("");
-                    }
-                }
-                break;
-            }
-            case(3): {
-                for(int i = 0; i < name.length - 1; i++) {
-                    if(gender[i] == 'F') {
-                        System.out.println("Name:" + name[i]);
-                        System.out.println("Make:" + car[i]);
-                        System.out.println("Year:" + year[i]);
-                        System.out.println("");
-                    }
-                }
-                break;
-            }
-            case(4): {
-                for(int i = 0; i < name.length - 1; i++) {
-                    if((gender[i] == 'M') && (age[i] < 35) && (car[i].equalsIgnoreCase("Ford")) && (state[i].equalsIgnoreCase("NJ"))) {
-                        System.out.println("Name:" + name[i]);
-                        System.out.println("");
-                    }
-                }
-                break;
-            }
-            default: {
-
             }
         }
+        while(casenum > 0 && casenum < 5);
     }
+    //alphabetic sort
     public static void alphabetic(String[] words, String[] address, String[] state, int[] age, char[] gender, int[] salary, int[] savings, String[] car, int[] year) {
         String temp;
         int temp1;

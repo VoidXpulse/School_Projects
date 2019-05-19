@@ -9,7 +9,7 @@ public class Eight_Fourteen {
         double[] yeet = {15.5, 24.6, 32.7, 14.3, 15.8};
 
         exchange(yeet);
-
+        //sorting the array
         boolean success;
         double key = 22;
         int top = yeet.length - 1, bottom = 0;
