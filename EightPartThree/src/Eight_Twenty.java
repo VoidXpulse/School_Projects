@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class Eight_Twenty {
     //Justin Ecarma
     //5/16/2019
-    //
-    //
+    //Lab 8.20
+    //Extra: The winning number is randomized
     public static void main(String[] args) {
         File firstname = new File("EightPartThree/src/firstname.txt");
         File firstnum = new File("EightPartThree/src/firstnum.txt");
@@ -21,13 +21,19 @@ public class Eight_Twenty {
         Random rando = new Random();
 
         int win = rando.nextInt(100) + 1, winner = 0;
+        //getting random win number
         boolean wincond = false;
 
+        //declaring and initializing variables, and opening files
+
+        //try catch loop for errors
         try{
             Scanner theScanner = new Scanner(firstname);
             Scanner theScanner1 = new Scanner(firstnum);
             Scanner theScanner2 = new Scanner(lastname);
             Scanner theScanner3 = new Scanner(lastnum);
+
+            //creating Scanners
 
             for(int i = 0; i < fn.length; i++) {
                 fn[i] = theScanner.next();
@@ -47,6 +53,7 @@ public class Eight_Twenty {
 
             alphabetic(fn, fnu);
             alphabetic(ln, lnu);
+            //alphabetic sort for arrays
 
             for(int i = 0; i < fn.length; i++) {
                 System.out.print(fn[i] + " ");
@@ -67,17 +74,19 @@ public class Eight_Twenty {
                 }
             }
 
+            //printing result
             if(wincond) {
                 System.out.println("The winner is " + fn[winner] + " " + ln[winner] + ", number " + fnu[winner] + ".");
             }
             else {
-                System.out.println("No winner here, but the winner number is " + win);
+                System.out.println("No winner here, but the winning number is " + win);
             }
         }
         catch(FileNotFoundException e){
             System.out.println(e.getMessage());
         }
     }
+    //alphabet sort method
     public static void alphabetic(String[] words, int[] numbers) {
         String temp;
         int temp1;
