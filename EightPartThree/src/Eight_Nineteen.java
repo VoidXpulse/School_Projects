@@ -20,11 +20,11 @@ public class Eight_Nineteen {
         if (p2 > 1) {
             for (int i = 0; i < 9; i++) {
                 showBoard(board);
-                if (winCheck(board, 'X')) {
+                if (winCheck(board, 'O')) {
                     System.out.println("Player 1 Wins");
                     break;
                 }
-                if (winCheck(board, 'O')) {
+                if (winCheck(board, 'X')) {
                     System.out.println("Player 2 Wins");
                     break;
                 }
@@ -90,11 +90,11 @@ public class Eight_Nineteen {
         } else {
             for (int i = 0; i < 9; i++) {
                 showBoard(board);
-                if (winCheck(board, 'X')) {
+                if (winCheck(board, 'O')) {
                     System.out.println("Player 1 Wins");
                     break;
                 }
-                if (winCheck(board, 'O')) {
+                if (winCheck(board, 'X')) {
                     System.out.println("Player 2 Wins");
                     break;
                 }
