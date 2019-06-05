@@ -1,6 +1,6 @@
 import java.awt.*;
 import javax.swing.*;
-
+//importing the things
 public class Nine_Three_Part_One extends JPanel {
     //Justin Ecarma
     //6/4/2019
@@ -9,7 +9,7 @@ public class Nine_Three_Part_One extends JPanel {
     public static void main(String[] args) {
         JFrame f = new JFrame("eeeee");
         Nine_Three_Part_One d = new Nine_Three_Part_One();
-
+        //making JFrame and setting up basic window
         f.add(d);
         f.setSize(400,400);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -19,22 +19,23 @@ public class Nine_Three_Part_One extends JPanel {
     }
     public void paintComponent (Graphics g)
     {
+
         super.paintComponent(g);
         g.setColor(Color.red);
         g.fillRect(100, 100, 200, 150);
-
+        //making house
         g.setColor(Color.black);
         g.drawLine(100, 100, 150, 50);
         g.setColor(Color.black);
         g.drawLine(150, 50, 300, 100);
-
+        //making roof lines
         g.setColor(Color.yellow);
         g.fillRect(150, 150, 25, 25);
         g.setColor(Color.yellow);
         g.fillRect(225, 150, 25, 25);
-
+        //making window
         g.setColor(Color.yellow);
         g.fillRect(175, 200, 50, 50);
-
+        //making door
     }
 }
