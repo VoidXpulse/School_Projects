@@ -23,7 +23,7 @@ public class Seven_Two_Part_Two {
                 System.out.println("Number of Hours Worked: " + two);
                 gross = one * two;
                 System.out.println("Gross Pay: $" + gross);
-                System.out.println("");
+                System.out.println();
                 if(!theScanner.hasNext())
                 {
                     break;

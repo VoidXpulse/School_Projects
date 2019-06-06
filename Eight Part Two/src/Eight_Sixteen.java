@@ -43,7 +43,7 @@ public class Eight_Sixteen {
                         if ((gender[i] == 'M') && (age[i] > 30) && (car[i].equalsIgnoreCase("Ford")) && (salary[i] > 20000)) {
                             System.out.println("Name:" + name[i]);
                             System.out.println("Address:" + address[i]);
-                            System.out.println("");
+                            System.out.println();
                         }
                     }
                     break;
@@ -52,7 +52,7 @@ public class Eight_Sixteen {
                     for (int i = 0; i < name.length - 1; i++) {
                         if (((car[i].equalsIgnoreCase("Chev")) || (car[i].equalsIgnoreCase("Honda")) || (car[i].equalsIgnoreCase("Ford"))) && (salary[i] > 15000) && (savings[i]) < 2000) {
                             System.out.println("Name:" + name[i]);
-                            System.out.println("");
+                            System.out.println();
                         }
                     }
                     break;
@@ -63,7 +63,7 @@ public class Eight_Sixteen {
                             System.out.println("Name:" + name[i]);
                             System.out.println("Make:" + car[i]);
                             System.out.println("Year:" + year[i]);
-                            System.out.println("");
+                            System.out.println();
                         }
                     }
                     break;
@@ -72,7 +72,7 @@ public class Eight_Sixteen {
                     for (int i = 0; i < name.length - 1; i++) {
                         if ((gender[i] == 'M') && (age[i] < 35) && (car[i].equalsIgnoreCase("Ford")) && (state[i].equalsIgnoreCase("NJ"))) {
                             System.out.println("Name:" + name[i]);
-                            System.out.println("");
+                            System.out.println();
                         }
                     }
                     break;

@@ -5,8 +5,8 @@ public class Eight_Fifteen {
     //Extra: Prints out the coordinates where death is.
     public static void main(String[] args) {
         int sum = 0;
-        int map[][] = {{5, 1, 3, 1, 2, 4, 2, 1}, {2, 4, 0, 3, 1, 4, 3, 2}, {6, 1, 5, 2, 1, 5, 4, 1}, {2, 3, 4, 1, 2, 2, 1, 0}, {4, 1, 4, 2, 6, 4, 2, 3}, {1, 3, 3, 3, 4, 1, 5, 2}};
-        boolean deadly[][] = new boolean[6][8];
+        int[][] map = {{5, 1, 3, 1, 2, 4, 2, 1}, {2, 4, 0, 3, 1, 4, 3, 2}, {6, 1, 5, 2, 1, 5, 4, 1}, {2, 3, 4, 1, 2, 2, 1, 0}, {4, 1, 4, 2, 6, 4, 2, 3}, {1, 3, 3, 3, 4, 1, 5, 2}};
+        boolean[][] deadly = new boolean[6][8];
 
         //declarng and initializing the variables
 
@@ -20,12 +20,7 @@ public class Eight_Fifteen {
                 }
                 sum = map[i][j] + map[i + 1][j] + map[i - 1][j] + map[i][j + 1] + map[i][j - 1];
 
-                if(sum > 15) {
-                    deadly[i][j] = true;
-                }
-                else {
-                    deadly[i][j] = false;
-                }
+                deadly[i][j] = sum > 15;
                 sum = 0;
             }
         }
@@ -37,11 +32,11 @@ public class Eight_Fifteen {
                 System.out.print(map[i][j]);
                 System.out.print(" | ");
             }
-            System.out.println("");
+            System.out.println();
         }
         //printing the map normally
 
-        System.out.println("");
+        System.out.println();
         for(int i = 0; i < map.length; i++) {
             System.out.print("| ");
             for (int j = 0; j < map[i].length; j++) {
@@ -53,7 +48,7 @@ public class Eight_Fifteen {
                 }
                 System.out.print(" | ");
             }
-            System.out.println("");
+            System.out.println();
         }
         //printing the deadly map
 

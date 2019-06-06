@@ -8,7 +8,7 @@ public class Eight_Thirteen {
     public static void main(String[] args) {
         Scanner theScanner = new Scanner(System.in);
         int x = 0;
-        int magic[][] = {{16, 3, 2, 13}, {5, 10, 11, 8}, {9, 6, 7, 12}, {4, 15, 14, 1}};
+        int[][] magic = {{16, 3, 2, 13}, {5, 10, 11, 8}, {9, 6, 7, 12}, {4, 15, 14, 1}};
         int model = 0;
         //declaring and initializing variables
 
@@ -30,7 +30,7 @@ public class Eight_Thirteen {
             //making a new array
             System.out.println("What side length would you like?");
             x = theScanner.nextInt();
-            int test[][] = new int[x][x];
+            int[][] test = new int[x][x];
 
             System.out.println("Enter your numbers");
 

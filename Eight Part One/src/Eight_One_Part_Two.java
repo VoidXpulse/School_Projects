@@ -9,7 +9,7 @@ public class Eight_One_Part_Two {
     */
     public static void main(String[] args) {
         Random rando = new Random();
-        int randomnum[] = new int[10];
+        int[] randomnum = new int[10];
         int count = 0;
         for(int y = 0; y < 10; y++)
         {
@@ -19,12 +19,12 @@ public class Eight_One_Part_Two {
         {
             System.out.print(z + " ");
         }
-        System.out.println("");
+        System.out.println();
         for(int y = 9; y > -1; y--)
         {
             System.out.print(randomnum[y] + " ");
         }
-        System.out.println("");
+        System.out.println();
         for(int z:randomnum)
         {
             if(z % 2 == 0)

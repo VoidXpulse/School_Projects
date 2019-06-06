@@ -63,7 +63,7 @@ public class Eight_Seventeen {
                     System.out.print("*");
                 }
             }
-            System.out.println("");
+            System.out.println();
         }
     }
 }

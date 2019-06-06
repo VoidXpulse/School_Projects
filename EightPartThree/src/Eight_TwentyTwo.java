@@ -78,12 +78,12 @@ public class Eight_TwentyTwo {
         for (int i = 0; i < negative.length; i++) {
             System.out.println(negative[i]);
         }
-        System.out.println("");
+        System.out.println();
         System.out.println("Even");
         for (int i = 0; i < even.length; i++) {
             System.out.println(even[i]);
         }
-        System.out.println("");
+        System.out.println();
         System.out.println("Odd");
         for (int i = 0; i < odd.length; i++) {
             System.out.println(odd[i]);

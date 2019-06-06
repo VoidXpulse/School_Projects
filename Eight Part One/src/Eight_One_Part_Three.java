@@ -9,7 +9,7 @@ public class Eight_One_Part_Three {
    */
     public static void main(String[] args) {
         Scanner theScanner = new Scanner(System.in);
-        int ages[] = new int[20];
+        int[] ages = new int[20];
         int count = 0, num;
         System.out.println("Enter the number of ages you want to enter.");
         num = theScanner.nextInt();

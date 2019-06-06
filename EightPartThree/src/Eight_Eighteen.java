@@ -22,20 +22,10 @@ public class Eight_Eighteen {
         }
         //getting the random chance of failure
         for(int i = 0; i < hours.length - 1; i++) {
-            if(hours[i] >= 132) {
-                hoursbool[i] = true;
-            }
-            else {
-                hoursbool[i] = false;
-            }
+            hoursbool[i] = hours[i] >= 132;
         }
         for(int i = 0; i < hours.length - 1; i++) {
-            if(gpa[i] >= 2.0) {
-                gpabool[i] = true;
-            }
-            else {
-                gpabool[i] = false;
-            }
+            gpabool[i] = gpa[i] >= 2.0;
         }
         //checking gpa and hours
         //printing the result

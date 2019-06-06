@@ -11,7 +11,7 @@ public class Eight_Ten {
         String decode = "";
         System.out.println("Enter the number of Strings to be entered.");
         words = theScanner.nextInt();
-        String codewords[] = new String[words];
+        String[] codewords = new String[words];
         System.out.println("Enter the code words");
         for(int i = 0; i < codewords.length; i++) {
             codewords[i] = theScanner.next();
