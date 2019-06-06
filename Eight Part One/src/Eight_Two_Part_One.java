@@ -14,7 +14,7 @@ public class Eight_Two_Part_One {
         DecimalFormat decaFor2 = new DecimalFormat("0");
         System.out.println("How many numbers do you want to enter?");
         numbers = theScanner.nextInt();
-        double usernums[] = new double[numbers];
+        double[] usernums = new double[numbers];
         System.out.println("Please enter the " + numbers + " numbers.");
         for(int i = 0; i < usernums.length; ++ i) {
             usernums[i] = theScanner.nextInt();

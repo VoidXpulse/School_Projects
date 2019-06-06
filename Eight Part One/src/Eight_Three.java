@@ -10,7 +10,7 @@ public class Eight_Three {
         int numbers, sum, average;
         System.out.println("How many numbers do you want to enter?");
         numbers = theScanner.nextInt();
-        int usernums[] = new int[numbers];
+        int[] usernums = new int[numbers];
         System.out.println("Please enter the " + numbers + " numbers.");
         for(int i = 0; i < usernums.length; ++ i) {
             usernums[i] = theScanner.nextInt();

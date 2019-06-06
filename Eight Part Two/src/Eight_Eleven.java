@@ -15,12 +15,7 @@ public class Eight_Eleven {
         boolean[] late = new boolean[10];
         int order = 0;
         for(int i = 0; i < late.length; i++) {
-            if(days[i] > rental[i]) {
-                late[i] = true;
-            }
-            else {
-                late[i] = false;
-            }
+            late[i] = days[i] > rental[i];
         }
         System.out.println("Would you like customers printed out by id or movie?");
         System.out.println("1. ID");

@@ -11,7 +11,7 @@ public class Eight_Four {
         String key;
         Scanner theScanner = new Scanner(System.in);
         Random rando = new Random();
-        String food[] = new String[10];
+        String[] food = new String[10];
         for(int i = 0; i < 10; i++) {
             word = rando.nextInt(10);
             if(word <= 4) {

@@ -16,7 +16,7 @@ public class Eight_Twelve {
 
             Thread.sleep(rando.nextInt(101) + 450);
         }
-        System.out.println("");
+        System.out.println();
         System.out.println("The Matrix has you.");
         Thread.sleep(2500);
         System.out.println("Follow the white rabbit.");
@@ -30,7 +30,7 @@ public class Eight_Twelve {
 
             Thread.sleep(rando.nextInt(101) + 450);
         }
-        System.out.println("");
+        System.out.println();
         alphabetic(matrix);
         printArray(matrix);
     }

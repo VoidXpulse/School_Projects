@@ -9,7 +9,7 @@ public class Eight_One_Part_One {
     */
     public static void main(String[] args) {
         DecimalFormat decFor = new DecimalFormat("0.00");
-        double finalGrade[] = {85.8, 93.7, 76, 88.5, 100, 91.3};
+        double[] finalGrade = {85.8, 93.7, 76, 88.5, 100, 91.3};
         double sum = 0;
         for (double y : finalGrade) {
             sum += y;

@@ -36,10 +36,10 @@ public class Eight_Fourteen {
             }
         }
     }
-    public static boolean binarySearch(double numbers[], double key, int top, int bottom) {
+    public static boolean binarySearch(double[] numbers, double key, int top, int bottom) {
         return binarySearchOne(numbers, key, top, bottom);
     }
-    public static boolean binarySearchOne(double numbers[], double key, int top, int bottom) {
+    public static boolean binarySearchOne(double[] numbers, double key, int top, int bottom) {
         if(bottom > top) {
             return false;
         }

@@ -29,7 +29,7 @@ public class Six_Seven {
             //looping through many iterations in order to see if the ship will launch
             launch = 0;
             //reseting if loop fails
-            System.out.println("");
+            System.out.println();
             System.out.print("Run " + run);
             //checking if the crew member suceeds or fails. 
             if (R2()) {
@@ -75,14 +75,14 @@ public class Six_Seven {
             }
 
             if(run >= 20) {
-                System.out.println("");
+                System.out.println();
                 System.out.println("Yoda used The Force to launch the ship!");
                 launch =+ 6;
             }
             //EXTRA bits: Yoda will launch the ship if run count is over 20
             //Vader will stop the shiip if the run count is over 15, the ship can launch, and if Vader reaches a certain efficiency of his own
             if((run >= 15) && (launch >= 6) && (Vader())) {
-                System.out.println("");
+                System.out.println();
                 System.out.println("Darth Vader stopped the ship from launching using The Force!");
                 launch = 0;
             }
@@ -90,53 +90,37 @@ public class Six_Seven {
             run++;
         }
             while(!(launch >= 6));
-            System.out.println("");
+            System.out.println();
             System.out.println("WE ARE GO FOR LAUNCH!");
             //ending the program
         }
         //basically the same method, but with different numbers for succeed, i.e., R2 is 40, C3PO is 50, etc.
         public static boolean R2() {
             Random rando = new Random();
-            if(rando.nextInt(101) >= 40)
-                return true;
-            else
-                return false;
+            return rando.nextInt(101) >= 40;
         }
         public static boolean C3() {
             Random rando = new Random();
-            if (rando.nextInt(101) >= 50)
-                return true;
-            else
-                return false;
+            return rando.nextInt(101) >= 50;
         }
         public static boolean Han() {
             Random rando = new Random();
-            if (rando.nextInt(101) >= 30)
-                return true;
-            else return false;
+            return rando.nextInt(101) >= 30;
         }
         public static boolean Luke() {
             Random rando = new Random();
-            if (rando.nextInt(101) >= 20)
-                return true;
-            else return false;
+            return rando.nextInt(101) >= 20;
         }
         public static boolean Chewie() {
             Random rando = new Random();
-            if (rando.nextInt(101) >= 35)
-                return true;
-            else return false;
+            return rando.nextInt(101) >= 35;
         }
         public static boolean Leia() {
             Random rando = new Random();
-            if (rando.nextInt(101) >= 45)
-                return true;
-            else return false;
+            return rando.nextInt(101) >= 45;
     }
         public static boolean Vader() {
             Random rando = new Random();
-            if (rando.nextInt(101) >= 66)
-                return true;
-            else return false;
+            return rando.nextInt(101) >= 66;
         }
 }
