@@ -4,9 +4,14 @@ import java.awt.*;
 public class teszt extends JPanel{
     public static void main (String [] args)
     {
-        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
-        String allFonts[] = ge.getAvailableFontFamilyNames();
-        for (int i = 0; i < allFonts.length; i++)
-            System.out.println(allFonts[i]);
+        String st = "at";
+        for(int a=0; a < st.length(); a++) {
+            for(int b=1; b<=a; b++){
+                System.out.println(" ");
+            }
+            for(int c = a; c<=st.length()/2+1;c++) {
+                System.out.print(st.charAt(a));
+            }
+        }
     }
 }
