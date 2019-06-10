@@ -1,11 +1,11 @@
 import javax.swing.*;
 import java.awt.*;
-
+//import the things
 public class Nine_Two extends JPanel {
     //Justin Ecarma
     //6/9/2019
     //Lab 9.2
-    //
+    //Extra: Another ghost is on the grid
     public static void main(String[] args) {
         JFrame f = new JFrame("eeeee");
         Nine_Two d = new Nine_Two();
@@ -21,12 +21,15 @@ public class Nine_Two extends JPanel {
         super.paintComponent(g);
         Font logo = new Font("Arial", Font.PLAIN, 125);
         setBackground(Color.black);
+        //making font and background
 
         g.setColor(Color.yellow);
         g.fillArc(165, 25, 75, 75, 45, 270);
         g.setColor(Color.white);
         g.setFont(logo);
         g.drawString("Pa  Man", 10, 100);
+        //making the logo
+
         int[] x = {100, 100, 105, 110, 115, 120, 125, 130, 130};
         int[] x2 = {100, 100, 105, 110, 115, 120, 125, 130, 130};
         int[] y = {200, 220, 215, 220, 215, 220, 215, 220, 200};
@@ -57,11 +60,13 @@ public class Nine_Two extends JPanel {
             g.setColor(Color.BLUE);
             g.fillOval(124 + (40 * i), 196, 6, 6);
         }
+        //making the ghosts under the logo
 
         g.setColor(Color.yellow);
         g.fillArc(300, 185, 30, 30, 45, 270);
         g.setColor(Color.WHITE);
         g.fillOval(350, 194, 15, 15);
+        //Making PACMAN and the Power Pellet under the logo
 
         g.fillRect(100, 300, 100, 100);
         g.fillRect(300, 300, 100, 100);
@@ -76,6 +81,7 @@ public class Nine_Two extends JPanel {
         g.fillRect(100, 700, 100, 100);
         g.fillRect(300, 700, 100, 100);
         g.fillRect(500, 500, 100, 120);
+        //making the grid
 
         g.setColor(Color.RED);
         int[] e = {135, 135, 140, 145, 150, 155, 160, 165, 165};
@@ -90,6 +96,7 @@ public class Nine_Two extends JPanel {
         g.fillOval(118 + (35), 293 + 135, 12, 12);
         g.setColor(Color.BLUE);
         g.fillOval(124 + (35), 296 + 135, 6, 6);
+        //making ghost1 on the grid
 
         g.setColor(Color.PINK);
         int[] r = {135, 135, 140, 145, 150, 155, 160, 165, 165};
@@ -104,8 +111,10 @@ public class Nine_Two extends JPanel {
         g.fillOval(118 + (35), 293 + 335, 12, 12);
         g.setColor(Color.BLUE);
         g.fillOval(124 + (35), 296 + 335, 6, 6);
+        //making ghost2 on the grid
 
         g.setColor(Color.yellow);
         g.fillArc(335, 635, 30, 30, 45, 270);
+        //making PACMAN on the grid
     }
 }
