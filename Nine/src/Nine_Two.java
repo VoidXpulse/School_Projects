@@ -11,7 +11,7 @@ public class Nine_Two extends JPanel {
         Nine_Two d = new Nine_Two();
         //making JFrame and setting up basic window
         f.add(d);
-        f.setSize(500,500);
+        f.setSize(516,832);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setLocationRelativeTo(null);
         f.setVisible(true);
@@ -28,21 +28,84 @@ public class Nine_Two extends JPanel {
         g.setFont(logo);
         g.drawString("Pa  Man", 10, 100);
         int[] x = {100, 100, 105, 110, 115, 120, 125, 130, 130};
-        int[] y = {400, 420, 415, 420, 415, 420, 415, 420, 400};
-        for() {
-            g.setColor(Color.RED);
+        int[] x2 = {100, 100, 105, 110, 115, 120, 125, 130, 130};
+        int[] y = {200, 220, 215, 220, 215, 220, 215, 220, 200};
+        for(int i = 0; i < 4; i++) {
+            if(i == 0) {
+                g.setColor(Color.ORANGE);
+            }
+            else if(i == 1) {
+                g.setColor(Color.CYAN);
+            }
+            else if(i == 2) {
+                g.setColor(Color.PINK);
+            }
+            else{
+                g.setColor(Color.RED);
+            }
+            for (int j = 0; j < 9; j++) {
+                x[j] = x2[j] + (40 * i);
+            }
             g.fillPolygon(x, y, 9);
-            g.fillArc(99, 385, 31, 30, 0, 180);
+            g.fillArc(99  + (40 * i), 185, 31, 30, 0, 180);
             g.setColor(Color.WHITE);
-            g.fillOval(105, 393, 12, 12);
+            g.fillOval(105 + (40 * i), 193, 12, 12);
             g.setColor(Color.BLUE);
-            g.fillOval(111, 396, 6, 6);
+            g.fillOval(111 + (40 * i), 196, 6, 6);
             g.setColor(Color.WHITE);
-            g.fillOval(118, 393, 12, 12);
+            g.fillOval(118 + (40 * i), 193, 12, 12);
             g.setColor(Color.BLUE);
-            g.fillOval(124, 396, 6, 6);
-
+            g.fillOval(124 + (40 * i), 196, 6, 6);
         }
 
+        g.setColor(Color.yellow);
+        g.fillArc(300, 185, 30, 30, 45, 270);
+        g.setColor(Color.WHITE);
+        g.fillOval(350, 194, 15, 15);
+
+        g.fillRect(100, 300, 100, 100);
+        g.fillRect(300, 300, 100, 100);
+        g.fillRect(0, 400, 100, 100);
+        g.fillRect(200, 400, 100, 100);
+        g.fillRect(400, 400, 100, 100);
+        g.fillRect(100, 500, 100, 100);
+        g.fillRect(300, 500, 100, 100);
+        g.fillRect(0, 600, 100, 100);
+        g.fillRect(200, 600, 100, 100);
+        g.fillRect(400, 600, 100, 100);
+        g.fillRect(100, 700, 100, 100);
+        g.fillRect(300, 700, 100, 100);
+        g.fillRect(500, 500, 100, 120);
+
+        g.setColor(Color.RED);
+        int[] e = {135, 135, 140, 145, 150, 155, 160, 165, 165};
+        int[] d = {435, 455, 450, 455, 450, 455, 450, 455, 435};
+        g.fillPolygon(e, d, 9);
+        g.fillArc(99  + (35), 285 + 135, 31, 30, 0, 180);
+        g.setColor(Color.WHITE);
+        g.fillOval(105 + (35), 293 + 135, 12, 12);
+        g.setColor(Color.BLUE);
+        g.fillOval(111 + (35), 296 + 135, 6, 6);
+        g.setColor(Color.WHITE);
+        g.fillOval(118 + (35), 293 + 135, 12, 12);
+        g.setColor(Color.BLUE);
+        g.fillOval(124 + (35), 296 + 135, 6, 6);
+
+        g.setColor(Color.PINK);
+        int[] r = {135, 135, 140, 145, 150, 155, 160, 165, 165};
+        int[] eeeeeee = {635, 655, 650, 655, 650, 655, 650, 655, 635};
+        g.fillPolygon(r, eeeeeee, 9);
+        g.fillArc(99  + (35), 285 + 335, 31, 30, 0, 180);
+        g.setColor(Color.WHITE);
+        g.fillOval(105 + (35), 293 + 335, 12, 12);
+        g.setColor(Color.BLUE);
+        g.fillOval(111 + (35), 296 + 335, 6, 6);
+        g.setColor(Color.WHITE);
+        g.fillOval(118 + (35), 293 + 335, 12, 12);
+        g.setColor(Color.BLUE);
+        g.fillOval(124 + (35), 296 + 335, 6, 6);
+
+        g.setColor(Color.yellow);
+        g.fillArc(335, 635, 30, 30, 45, 270);
     }
 }
