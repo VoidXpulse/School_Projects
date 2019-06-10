@@ -27,6 +27,7 @@ public class Nine_Three_Part_Two extends JPanel{
 
         g.drawOval(50, 100, 100, 100);
         g.drawOval(100, 150, 100, 100);
+        g.setColor(Color.blue);
         g.drawOval(150, 100, 100, 100);
         g.drawOval(200, 150, 100, 100);
         g.drawOval(250, 100, 100, 100);
