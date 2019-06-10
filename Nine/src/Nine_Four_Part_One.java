@@ -1,7 +1,11 @@
 import javax.swing.*;
 import java.awt.*;
-
+//importing the thins
 public class Nine_Four_Part_One extends JPanel{
+    //Justin Ecarma
+    //6/10/2019
+    //Lab 9.4 Part 1
+    //
     public static void main(String[] args) {
         JFrame f = new JFrame("eeeee");
         Nine_Four_Part_One d = new Nine_Four_Part_One();
@@ -15,7 +19,7 @@ public class Nine_Four_Part_One extends JPanel{
     }
     public void paintComponent (Graphics g){
         super.paintComponent(g);
-
+        //paintComponent
         int[] x = {120, 220, 200, 100};
         int[] y = {200, 200, 220, 220};
         int[] x1 = {100, 100, 120, 120};
@@ -24,6 +28,7 @@ public class Nine_Four_Part_One extends JPanel{
         int[] y2 = {250, 250, 270, 270};
         int[] x3 = {200, 200, 220, 220};
         int[] y3 = {220, 270, 250, 200};
+        //coordinates
         g.setColor(Color.PINK);
         g.fillPolygon(x, y, 4);
         g.setColor(Color.BLUE);
@@ -40,5 +45,6 @@ public class Nine_Four_Part_One extends JPanel{
         g.fillPolygon(x3, y3, 4);
         g.setColor(Color.BLUE);
         g.drawPolygon(x3, y3, 4);
+        //drawing the things
     }
 }
