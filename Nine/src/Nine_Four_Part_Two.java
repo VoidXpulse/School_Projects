@@ -1,6 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
-
+//importing the things
 public class Nine_Four_Part_Two extends JPanel {
     //Justin Ecarma
     //6/10/2019
@@ -21,7 +21,8 @@ public class Nine_Four_Part_Two extends JPanel {
         super.paintComponent(g);
         //paintComponent
         setBackground(Color.GREEN);
-
+        //making the background green
+        //drawing the line
         g.drawLine(0, 0, 600, 600);
         g.setColor(Color.black);
         g.fillOval(275, 275, 100, 100);
@@ -31,5 +32,6 @@ public class Nine_Four_Part_Two extends JPanel {
         g.fillOval(75, 75, 100, 100);
         g.setColor(Color.BLUE);
         g.fillOval(100, 100, 100, 100);
+        //drawing the circles
     }
 }

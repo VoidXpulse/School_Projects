@@ -6,7 +6,7 @@ public class Nine_Four_Part_Three extends JPanel {
     //Justin Ecarma
     //6/10/2019
     //Lab 9.4 Part 3
-    //
+    //Extra: Makes a cone that is under the frustum
     public static void main(String[] args) {
         JFrame f = new JFrame("eeeee");
         Nine_Four_Part_Three d = new Nine_Four_Part_Three();
@@ -39,8 +39,8 @@ public class Nine_Four_Part_Three extends JPanel {
         g.setColor(Color.BLACK);
         g.drawOval(300, 300, 100, 20);
         g.setColor(Color.BLACK);
-        g.drawOval(325, 390, 50, 20);
         g.drawLine(300, 310, 350, 200);
         g.drawLine(400, 310, 350, 200);
+        //making the cone
     }
 }
