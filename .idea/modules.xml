@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Dice_Fun/Dice_Fun.iml" filepath="$PROJECT_DIR$/Dice_Fun/Dice_Fun.iml" />
       <module fileurl="file://$PROJECT_DIR$/Eight Part One/Eight Part One.iml" filepath="$PROJECT_DIR$/Eight Part One/Eight Part One.iml" />
       <module fileurl="file://$PROJECT_DIR$/Eight Part Two/Eight Part Two.iml" filepath="$PROJECT_DIR$/Eight Part Two/Eight Part Two.iml" />
       <module fileurl="file://$PROJECT_DIR$/EightPartThree/EightPartThree.iml" filepath="$PROJECT_DIR$/EightPartThree/EightPartThree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MPH/MPH.iml" filepath="$PROJECT_DIR$/MPH/MPH.iml" />
       <module fileurl="file://$PROJECT_DIR$/Nine/Nine.iml" filepath="$PROJECT_DIR$/Nine/Nine.iml" />
       <module fileurl="file://$PROJECT_DIR$/School Projects.iml" filepath="$PROJECT_DIR$/School Projects.iml" />
       <module fileurl="file://$PROJECT_DIR$/School_Projects.iml" filepath="$PROJECT_DIR$/School_Projects.iml" />

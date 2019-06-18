@@ -6,7 +6,7 @@ public class Nine_Six_Part_Two extends JPanel implements ActionListener {
     //Justin Ecarma
     //6/14/2019
     //Lab 9.6 Part 2
-    //Extra: The bugs will continue to fly across screen, "wrapping" around the screen (also there are multiple bugs)
+    //Extra: The bugs will continue to fly across screen, "wrapping" around the screen (also there are multiple bugs on screen)
 
     Timer time = new Timer(5, this);
     int x = 35, speed = 3;
